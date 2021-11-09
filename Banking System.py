@@ -4,7 +4,7 @@ class Account(ABC):
     @abstractmethod
     def __init__(self, n):
         self.n = n
-    #Returns the accoutn number for transfer purposes
+    #Returns the account number for transfer purposes
     def accountNum(self):
         pass
     def accountBalance(self):
@@ -37,6 +37,7 @@ class Payroll(Account):
     def accountDetails(self):
         r:str = "Name: " + str(self.__name) + "\n" + "Type: Payroll" + "\n" + "Status: " + str(self.status) + "\n" + "Balance: " + str(self.balance) + "\n"
         return r
+    
     #Prints the 5 most recent transactions
     def balanceReport(self):
         size = len(self.__balanceRecord)
